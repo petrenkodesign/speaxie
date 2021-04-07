@@ -1,0 +1,33 @@
+/* Tags customization */
+img {
+  max-width: 100%;
+}
+
+/* Bootstrap customization */
+.rounded {
+  border-radius: 16px !important;
+}
+
+/* Main style */
+.header {
+  background-image: url("../img/header-bg.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 189px;
+  color: #fff;
+}
+
+
+
+/* .wechat img {
+  margin: 5px;
+} */
+.wechat::before {
+  content: "";
+  background-image: url(../img/wechat.png);
+  display: inline-block;
+  vertical-align: middle;
+  height: 46px;
+  width: 46px;
+}
