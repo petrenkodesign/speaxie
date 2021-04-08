@@ -8,6 +8,7 @@
     <title>Speaxie - english classes</title>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
     <!-- Main styles for this site -->
     <link href="css/main.css" rel="stylesheet">
   </head>
@@ -68,7 +69,7 @@
             </div>
           </div>
           <div class="col-xs-12 col-sm-6 col-lg-6 squares">
-            <img src="img/squares.png"
+            <img src="img/squares.png" class="img-fluid">
           </div>
         </div>
       </div>
@@ -112,43 +113,78 @@
           <section>
             <div class="row">
               <div class="col-sm-4 mb-4 my-lg-0 px-lg-0">
-                  <a href="#!" data-mdb-toggle="modal" data-mdb-target="#galleryPop-1">
+                  <a href="#!" data-toggle="modal" data-target="#galleryPop-1">
                     <img src="img/g-image-1.png" />
                   </a>
               </div>
               <div class="col-sm-4 mb-4 my-lg-0 px-lg-0 ">
-                  <a href="#!" data-mdb-toggle="modal" data-mdb-target="#galleryPop-2">
+                  <a href="#!" data-toggle="modal" data-target="#galleryPop-2">
                     <img src="img/g-image-2.png" />
                   </a>
               </div>
               <div class="col-sm-4 mb-4 mb-lg-0 px-lg-0">
-                  <a href="#!" data-mdb-toggle="modal" data-mdb-target="#galleryPop-3">
+                  <a href="#!" data-toggle="modal" data-target="#galleryPop-3">
                     <img src="img/g-image-3.png" />
                   </a>
               </div>
             </div>
           </section>
           <!-- Section -> Modals -->
-          <div class="modal fade" id="galleryPop-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+          <section>
+            <div class="modal fade" id="galleryPop-1" tabindex="-1" role="dialog" aria-labelledby="GalleryImage1" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="GalleryImage1">Photo 1</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="img/g-image-1.png" />
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <section>
-
+            <div class="modal fade" id="galleryPop-2" tabindex="-1" role="dialog" aria-labelledby="GalleryImage2" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="GalleryImage2">Photo 2</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="img/g-image-2.png" />
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="galleryPop-3" tabindex="-1" role="dialog" aria-labelledby="GalleryImage3" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="GalleryImage3">Photo 3</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="img/g-image-3.png" />
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
         </div>
       </div>
@@ -209,16 +245,255 @@
         </div>
       </div>
       <!-- Our Team -->
-      <div>
+      <div class="team">
+        <div class="caption text-center">
+          <img src="img/team-ico.png">
+          <h2>
+            Our Team<br>
+            我们的老师
+          </h2>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 mb-4 my-lg-4">
+              <img src="img/teacher-1.png" class="rounded"/>
+            </div>
+            <div class="col-sm-4 mb-4 my-lg-4">
+              <h3>Teacher Serge</h3>
+              Hi there! My name is Serge and I'm a
+              professional English teacher with more
+              than 6 years of teaching experience,
+              backed by a bachelor degree in education
+              and multiple TESOL certificates.
+              I've been teaching English in China for
+              many years, helping kids and adults alike
+              to improve their English level.
+            </div>
+            <div class="col-sm-4 mb-4 my-lg-4">
+              大家好！我叫Serge。我是一名专业英语教师，
+              获得教育学士学位和多个TESOL证书，拥有6年以上的教学经验。
+              我在中国教书多年，帮助各个年龄段的儿童和成人提高英语水平。
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 mb-4 my-lg-4">
+              <img src="img/teacher-2.png" class="rounded"/>
+            </div>
+            <div class="col-sm-4 mb-4 my-lg-4">
+              <h3>Teacher Julie</h3>
+              Hi, everyone! My name is Julie and I'm a
+              professional English teacher.
+              I specialize in teaching preschoolers and
+              primary school students. Teaching English
+              to kids can often be very challenging.
+              That's why I use individual approach that
+              will help children to learn English in a
+              fun and playful way. My goal is to encourage
+              students to freely communicate in
+              English without fear of making mistakes.
+            </div>
+            <div class="col-sm-4 mb-4 my-lg-4">
+              大家好！我叫Julie。我是一位专业英语教师。
+              我专门负责学龄前儿童和小学生的英语教学。
+              教孩子们英语常常是很有挑战性的，
+              这就是为什么我使用一些特殊的教学方法，
+              这将有助于孩子们以一种有趣的好玩的方式学习英语。
+              我的目标是鼓励学生用英语自由交流，而不必担心犯错。
+            </div>
+          </div>
+        </div>
       </div>
       <!-- Our Materials -->
-      <div>
+      <div class="materials">
+        <div class="caption text-center">
+          <img src="img/books-ico.png">
+          <h2>
+            Our Materials<br>
+            我们的教材
+          </h2>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3 mb-4 my-lg-4">
+              <div class="card rounded-lg">
+                <img src="img/f-ico.png" class="card-img-top mx-auto" alt="First Reading">
+                <div class="card-body text-center">
+                  <h5 class="card-title">First Reading</h5>
+                  <p class="card-text">
+                    观赏教材内页请按此处
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mb-4 my-lg-4">
+              <div class="card rounded-lg">
+                <img src="img/l-ico.png" class="card-img-top mx-auto" alt="Little Hands">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Little Hands</h5>
+                  <p class="card-text">
+                    See Materials Sample
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mb-4 my-lg-4">
+              <div class="card rounded-lg">
+                <img src="img/p-ico.png" class="card-img-top mx-auto" alt="Phonics">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Phonics</h5>
+                  <p class="card-text">
+                    See Materials Sample
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mb-4 my-lg-4">
+              <div class="card rounded-lg">
+                <img src="img/s-ico.png" class="card-img-top mx-auto" alt="Smart English">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Smart English</h5>
+                  <p class="card-text">
+                    See Materials Sample
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 mb-2 my-lg-4 text-right">
+              <button type="button" class="btn btn-orange btn-lg rounded-sm">观赏全部教材目录册请按此处</button>
+            </div>
+            <div class="col-sm-6 mb-2 my-lg-4">
+              <button type="button" class="btn btn-orange btn-lg rounded-sm">See Materials Sample</button>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- Moments From Our Classes -->
-      <div>
+      <div class="moments">
+        <div class="caption text-center">
+          <img src="img/moments-ico.png">
+          <h2>
+            Moments From Our Classes<br>
+            课堂演示
+          </h2>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 mb-4 my-lg-4">
+              <div class="card border-0">
+                <img src="img/video-preview.png" class="card-img-top rounded" alt="Some video lesson">
+                <div class="card-body px-0">
+                  <h5 class="card-title">Lesson 1</h5>
+                  <p class="card-text">
+                    Id consectetur purus ut faucibus pulvinar elementum.
+                    Odio facilisis mauris sit amet massa vitae.
+                    Egestas dui id ornare arcu odio ut sem nulla pharetra.
+                    Consequat nisl vel pretium lectus quam id leo in vitae.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 mb-4 my-lg-4">
+              <div class="card border-0">
+                <img src="img/video-preview.png" class="card-img-top rounded" alt="Some video lesson">
+                <div class="card-body px-0">
+                  <h5 class="card-title">Lesson 2</h5>
+                  <p class="card-text">
+                    Id consectetur purus ut faucibus pulvinar elementum.
+                    Odio facilisis mauris sit amet massa vitae.
+                    Egestas dui id ornare arcu odio ut sem nulla pharetra.
+                    Consequat nisl vel pretium lectus quam id leo in vitae.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 mb-4 my-lg-4">
+              <div class="card border-0">
+                <img src="img/video-preview.png" class="card-img-top rounded" alt="Some video lesson">
+                <div class="card-body px-0">
+                  <h5 class="card-title">Lesson 3</h5>
+                  <p class="card-text">
+                    Id consectetur purus ut faucibus pulvinar elementum.
+                    Odio facilisis mauris sit amet massa vitae.
+                    Egestas dui id ornare arcu odio ut sem nulla pharetra.
+                    Consequat nisl vel pretium lectus quam id leo in vitae.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- Hear from our Happy Parents -->
-      <div>
+      <div class="reviews">
+        <div class="caption text-center">
+          <img src="img/like-ico.png">
+          <h2>
+            Hear From Our Happy Parents<br>
+            家长评价
+          </h2>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 mb-4 my-lg-4">
+              <ul class="list-group">
+                <li class="list-group-item border-0">
+                  <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0 rounded-circle bg-info">
+                      <img src="img/face-1.png">
+                    </div>
+                    <div class="flex-grow-1 mx-4">
+                      <h5>Justin</h5>
+                      <p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item border-0">
+                  Justin很喜欢，每次告诉他要上课了都会很兴奋，
+                  自己会主动问下节课是什么时候。老师很好，
+                  既有老师的威严又有亲和力，适合Justin这种坐不住的孩子。
+                  他上课的时候因为老师带动得好，还能玩游戏，一直都挺集中的。
+                </li>
+                <li class="list-group-item border-0 text-right">20.06.2020 22:11</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 mb-4 my-lg-4">
+              <ul class="list-group">
+                <li class="list-group-item border-0">
+                  <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0 rounded-circle bg-primary">
+                      <img src="img/face-2.png">
+                    </div>
+                    <div class="flex-grow-1 mx-4">
+                      <h5>Justin</h5>
+                      <p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item border-0">
+                  我家孩子英语基础一般，能听懂一些，但是也不认识字母。
+                  通过几星期的课程，对英语的兴趣见长。学语言是个慢功夫，
+                  这么短的时间能看到他的进步，说明老师方法得当，总之，
+                  话仙子是个很值得尝试的项目。
+                </li>
+                <li class="list-group-item border-0 text-right">20.06.2020 22:11</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
@@ -245,6 +520,7 @@
       </div>
     </footer>
 
+    <script type="text/javascript" src="vendor/jquery/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
