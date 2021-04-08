@@ -29,6 +29,7 @@ $( document ).ready(function() { // site load
 
 // video functionallity
 $('.video').click(function() {
-  console.log(this.paused)
+  if(this.paused==='undefined') return false;
+  console.log(this.paused);
   this.paused ? this.play() : this.pause();
 });
