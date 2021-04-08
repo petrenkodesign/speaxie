@@ -87,12 +87,24 @@ img {
   color: #fff;
 }
 
-/* Video in the carusel */
+/* Video  in the carusel */
 .card .video {
   object-fit: fill;
   width: 360px;
   height: 240px;
   max-width: 100%;
+}
+.card .progress {
+  width: 90%;
+  background: rgba(255,255,255,0.6);
+  height: 6px;
+  margin: auto;
+  margin-top: -30px;
+  margin-bottom: 30px;
+  z-index: 99999999;
+}
+.card .progress-bar {
+  background: #FD6C3E;
 }
 
 @media screen and (max-width: 800px) {
