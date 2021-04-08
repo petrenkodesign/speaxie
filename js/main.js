@@ -28,18 +28,29 @@ $( document ).ready(function() { // site load
 }); // end document ready function
 
 // video functionallity
-$('.video').click(function() {
-  if(this.paused==='undefined') return false;
-  console.log(this.paused);
-  this.paused ? this.play() : this.pause();
-  window.clearInterval(this.timer);
+$('.card .video-preview .control .play').click(function() {
+  var video = $(this).parent().parent().find('.video').get(0);
+  if(video.paused==='undefined') return false;
+  // video.paused ? video.play() : video.pause();
+  if(video.paused) {
+    video.play();
+    $(this).html("&#8545;");
+  }
+  else {
+    video.pause();
+    $(this).html("►");
+    window.clearInterval(video.timer);
+  }
 });
 
 $('.video').on("play", function() {
   var video_frame = this;
   this.timer = setInterval(function () {
     var progress = Math.round((video_frame.currentTime / video_frame.duration) * 100);
-    if(video_frame.currentTime===video_frame.duration) window.clearInterval(video_frame.timer);
     $(video_frame).parent().find('.progress-bar').css('width', progress+'%').attr('aria-valuenow', progress);
+    if(video_frame.currentTime===video_frame.duration) {
+      window.clearInterval(video_frame.timer);
+      $(video_frame).parent().find('.control .play').html("►");
+    }
   }, 100);
 });
