@@ -31,6 +31,49 @@ img {
   color: #FFB357;
 }
 
+/* OWL carusel customization */
+.owl-nav {
+  position: absolute;
+  color: white;
+  font-size: 28px;
+  top: 100px;
+  left: 0;
+  margin-left: -61px;
+  width: calc(100% + 122px);
+  z-index: -1;
+}
+.owl-nav button {
+  width: 36px;
+  height: 36px;
+  background: #000 !important;
+  border-radius: 50%;
+}
+.owl-nav button:hover {
+  background: #222 !important;
+}
+.owl-nav button:active {
+  background: #333 !important;
+}
+.owl-nav button:focus {outline:0;}
+.owl-nav button span {
+  display: block;
+  line-height: 0;
+  font-family: monospace;
+  font-size: 30px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+.owl-nav .disabled {
+  background: none !important;
+  color: #ccc !important;
+  border: 1px solid #ccc !important;
+}
+.owl-nav .disabled:hover {
+  background: none !important;
+}
+.owl-next {
+  float: right;
+}
 /* Fonts */
 
 
@@ -44,13 +87,19 @@ img {
   color: #fff;
 }
 
+/* Video in the carusel */
+.card .video {
+  width: 360px;
+  height: 240px;
+  object-fit: fill;
+}
+
 /* Our Materials */
 .materials .card-img-top {
   max-width: 106px;
   margin-top: 60px;
   margin-bottom:  24px;
 }
-
 .materials .btn {
   width: 265px !important;
   font-style: normal;
@@ -60,6 +109,8 @@ img {
   text-align: center;
   letter-spacing: 0.2px
 }
+
+/* Moments From Our Classes */
 
 
 /* .wechat img {
