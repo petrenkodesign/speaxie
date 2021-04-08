@@ -89,9 +89,17 @@ img {
 
 /* Video in the carusel */
 .card .video {
+  object-fit: fill;
   width: 360px;
   height: 240px;
-  object-fit: fill;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .card .video {
+    width: 270px;
+    height: 180px;
+  }
 }
 
 /* Our Materials */
