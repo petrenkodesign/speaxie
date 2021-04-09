@@ -62,6 +62,10 @@ img {
   border-radius: 32px;
   margin: 0;
 }
+#videoPop .modal-footer {
+  display: block;
+  color: white;
+}
 
 /* OWL carusel customization */
 .owl-nav {

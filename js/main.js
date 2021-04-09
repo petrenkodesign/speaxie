@@ -70,9 +70,15 @@ $('.card .video-preview .control').dblclick(function() {
   var video_type = $(this).parent().find('.video source').attr('type');
   var play_time = $(this).parent().find('.video').get(0).currentTime;
 
+  var title = $(this).parent().parent().find('.card-title').html();
+  var text = $(this).parent().parent().find('.card-text').html();
+
   $('#videoPop .video').html('<source src="' + video_src + '" type="' + video_type + '"></source>');
   $('#videoPop .video').get(0).currentTime = play_time;
   $('#videoPop .video').get(0).play();
+
+  $('#videoPop .modal-footer .title').html(title);
+  $('#videoPop .modal-footer .text').html(text);
 });
 
 $('#videoPop').on('hidden.bs.modal', function (e) {
