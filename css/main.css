@@ -31,6 +31,38 @@ img {
   color: #FFB357;
 }
 
+/* Video Modal customization */
+.modal-content, .modal-header, .modal-footer {
+  background: none;
+  border: none;
+}
+
+#videoPop .close {
+  opacity: 1;
+  color: #fff;
+  text-shadow: none;
+  font-size: 16px;
+  font-weight: 400;
+}
+#videoPop .close:focus, #videoPop .video:focus {outline:0;}
+#videoPop .modal-dialog {
+  max-width: 60%;
+}
+#videoPop .modal-body {
+  background: #DFE2E6;
+  width: 100%;
+  height: 72%;
+  padding: 0;
+  border-radius: 32px;
+}
+#videoPop .video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 32px;
+  margin: 0;
+}
+
 /* OWL carusel customization */
 .owl-nav {
   position: absolute;
@@ -126,6 +158,7 @@ img {
   padding: 15px;
 }
 .card .video-preview .control .timer {
+  pointer-events: none;
   position: absolute;
   right: 0;
   bottom: 40px;
@@ -138,6 +171,10 @@ img {
   background: #000;
   color: #fff;
   border-radius: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .card .video-preview .control .progress {
   position: absolute;

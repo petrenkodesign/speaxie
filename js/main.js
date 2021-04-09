@@ -60,3 +60,39 @@ $('.video').on("play", function() {
     }
   }, 100);
 });
+
+// Popup window for video content
+$('.card .video-preview .control').dblclick(function() {
+  stopAllPlay();
+  $('#videoPop').modal('show');
+
+  var video_src = $(this).parent().find('.video source').attr('src');
+  var video_type = $(this).parent().find('.video source').attr('type');
+  var play_time = $(this).parent().find('.video').get(0).currentTime;
+
+  $('#videoPop .video').html('<source src="' + video_src + '" type="' + video_type + '"></source>');
+  $('#videoPop .video').get(0).currentTime = play_time;
+  $('#videoPop .video').get(0).play();
+});
+
+$('#videoPop').on('hidden.bs.modal', function (e) {
+  stopAllPlay();
+})
+
+function stopAllPlay() {
+  $('.video').each(function() {
+    if(this.paused==='undefined') return false;
+    this.pause();
+    $(this).parent().find('.control .play').html('<span class="icon-play"></span>');
+  });
+}
+
+function openFullscreen(elem) {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) {
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    elem.msRequestFullscreen();
+  }
+}
