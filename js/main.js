@@ -34,11 +34,11 @@ $('.card .video-preview .control .play').click(function() {
   // video.paused ? video.play() : video.pause();
   if(video.paused) {
     video.play();
-    $(this).html("&#8545;");
+    $(this).html('<span class="icon-pause"></span>');
   }
   else {
     video.pause();
-    $(this).html("►");
+    $(this).html('<span class="icon-play"></span>');
     window.clearInterval(video.timer);
   }
 });
@@ -50,7 +50,7 @@ $('.video').on("play", function() {
     $(video_frame).parent().find('.progress-bar').css('width', progress+'%').attr('aria-valuenow', progress);
     if(video_frame.currentTime===video_frame.duration) {
       window.clearInterval(video_frame.timer);
-      $(video_frame).parent().find('.control .play').html("►");
+      $(video_frame).parent().find('.control .play').html('<span class="icon-loop"></span>');
     }
   }, 100);
 });
