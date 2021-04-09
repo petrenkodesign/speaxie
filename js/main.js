@@ -47,7 +47,13 @@ $('.video').on("play", function() {
   var video_frame = this;
   this.timer = setInterval(function () {
     var progress = Math.round((video_frame.currentTime / video_frame.duration) * 100);
+    var s = parseInt(video_frame.currentTime % 60);
+    if (s<10) s = '0' + s;
+    var m = parseInt((video_frame.currentTime / 60) % 60);
+
     $(video_frame).parent().find('.progress-bar').css('width', progress+'%').attr('aria-valuenow', progress);
+    $(video_frame).parent().find('.timer').html(m+":"+s);
+
     if(video_frame.currentTime===video_frame.duration) {
       window.clearInterval(video_frame.timer);
       $(video_frame).parent().find('.control .play').html('<span class="icon-loop"></span>');

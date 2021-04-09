@@ -101,10 +101,17 @@ img {
   opacity: 0;
   position: absolute;
   top:0;
-  left:0;
-  width: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
   height: 100%;
   z-index: 99999999;
+  transition: opacity 0.3s;
+}
+.card .video-preview .control:hover {
+  opacity: 1;
   transition: opacity 0.3s;
 }
 .card .video-preview .control .btn {
@@ -118,25 +125,28 @@ img {
   font-size: 20px;
   padding: 15px;
 }
-.card .video-preview .control:hover {
-  opacity: 1;
-  transition: opacity 0.3s;
+.card .video-preview .control .timer {
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  max-width: 52px;
+  max-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 8px;
+  background: #000;
+  color: #fff;
+  border-radius: 6px;
 }
-.card .video-preview .progress {
+.card .video-preview .control .progress {
   position: absolute;
   bottom: 30px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
   height: 6px;
+  width: 100%;
   background: rgba(255,255,255,0.6);
-  /* margin: auto; */
-  /* margin-top: -30px;
-  margin-bottom: 30px; */
 }
-.card .video-preview .progress-bar {
+.card .video-preview .control .progress-bar {
   background: #FD6C3E;
 }
 
