@@ -13,6 +13,7 @@
     <!-- OWL carusel style -->
     <link href="vendor/owl/dist/assets/owl.carousel.min.css" rel="stylesheet" >
     <!-- Main styles for this site -->
+    <link href="css/fonts.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
@@ -110,28 +111,21 @@
         </div>
       </div>
       <!-- Gallery -->
-      <div>
+      <div class="gallery">
         <div class="container-fluid">
-          <!-- Section -> Images -->
-          <section>
-            <div class="row">
-              <div class="col-sm-4 mb-4 my-lg-0 px-lg-0">
-                  <a href="#!" data-toggle="modal" data-target="#imagePop">
-                    <img src="img/g-image-1.png" />
-                  </a>
+          <div class="row">
+            <div class="image-owl-carousel owl-carousel owl-theme">
+              <div class="item" data-id="1">
+                <img src="img/g-image-1.png" alt="Photo 1" />
               </div>
-              <div class="col-sm-4 mb-4 my-lg-0 px-lg-0 ">
-                  <a href="#!" data-toggle="modal" data-target="#imagePop">
-                    <img src="img/g-image-2.png" />
-                  </a>
+              <div class="item" data-id="2">
+                <img src="img/g-image-2.png" alt="Photo 2" />
               </div>
-              <div class="col-sm-4 mb-4 mb-lg-0 px-lg-0">
-                  <a href="#!" data-toggle="modal" data-target="#imagePop">
-                    <img src="img/g-image-3.png" />
-                  </a>
+              <div class="item" data-id="3">
+                <img src="img/g-image-3.png" alt="Photo 3" />
               </div>
             </div>
-          </section>
+          </div>
         </div>
       </div>
       <!-- Video Lessons -->
@@ -334,56 +328,58 @@
         </div>
         <div class="container">
           <div class="row">
-            <div class="col-sm-3 mb-4 my-lg-4">
-              <div class="card rounded-lg">
-                <img src="img/f-ico.png" class="card-img-top mx-auto" alt="First Reading">
-                <div class="card-body text-center">
-                  <h5 class="card-title">First Reading</h5>
-                  <p class="card-text">
-                    观赏教材内页请按此处
-                  </p>
+            <div class="material-owl-carousel owl-carousel owl-theme">
+              <div class="item">
+                <div class="card mx-3 rounded-lg" data-id="1">
+                  <img src="img/f-ico.png" class="card-img-top mx-auto" alt="First Reading">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">First Reading</h5>
+                    <p class="card-text">
+                      观赏教材内页请按此处
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-sm-3 mb-4 my-lg-4">
-              <div class="card rounded-lg">
-                <img src="img/l-ico.png" class="card-img-top mx-auto" alt="Little Hands">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Little Hands</h5>
-                  <p class="card-text">
-                    See Materials Sample
-                  </p>
+              <div class="item">
+                <div class="card mx-3 rounded-lg" data-id="2">
+                  <img src="img/l-ico.png" class="card-img-top mx-auto" alt="Little Hands">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Little Hands</h5>
+                    <p class="card-text">
+                      See Materials Sample
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-sm-3 mb-4 my-lg-4">
-              <div class="card rounded-lg">
-                <img src="img/p-ico.png" class="card-img-top mx-auto" alt="Phonics">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Phonics</h5>
-                  <p class="card-text">
-                    See Materials Sample
-                  </p>
+              <div class="item">
+                <div class="card mx-3 rounded-lg" data-id="3">
+                  <img src="img/p-ico.png" class="card-img-top mx-auto" alt="Phonics">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Phonics</h5>
+                    <p class="card-text">
+                      See Materials Sample
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-sm-3 mb-4 my-lg-4">
-              <div class="card rounded-lg">
-                <img src="img/s-ico.png" class="card-img-top mx-auto" alt="Smart English">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Smart English</h5>
-                  <p class="card-text">
-                    See Materials Sample
-                  </p>
+              <div class="item">
+                <div class="card mx-3 rounded-lg" data-id="4">
+                  <img src="img/s-ico.png" class="card-img-top mx-auto" alt="Smart English">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Smart English</h5>
+                    <p class="card-text">
+                      See Materials Sample
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </div><!-- owl end -->
           </div>
           <div class="row">
-            <div class="col-sm-6 mb-2 my-lg-4 text-right">
+            <div class="col-sm-6 mb-2 my-lg-4 text-center text-md-right">
               <button type="button" class="btn btn-orange btn-lg rounded-sm">观赏全部教材目录册请按此处</button>
             </div>
-            <div class="col-sm-6 mb-2 my-lg-4">
+            <div class="col-sm-6 mb-2 my-lg-4 text-center text-md-left">
               <button type="button" class="btn btn-orange btn-lg rounded-sm">See Materials Sample</button>
             </div>
           </div>
@@ -530,61 +526,63 @@
         </div>
         <div class="container">
           <div class="row">
-            <div class="col-sm-6 mb-4 my-lg-4">
-              <ul class="list-group">
-                <li class="list-group-item border-0">
-                  <div class="d-flex align-items-center">
-                    <div class="flex-shrink-0 rounded-circle bg-info">
-                      <img src="img/face-1.png">
+            <div class="review-owl-carousel owl-carousel owl-theme">
+              <div class="item" data-id="1">
+                <ul class="list-group">
+                  <li class="list-group-item border-0">
+                    <div class="d-flex align-items-center">
+                      <div class="flex-shrink-0 rounded-circle bg-info">
+                        <img src="img/face-1.png">
+                      </div>
+                      <div class="flex-grow-1 mx-4">
+                        <h5>Justin</h5>
+                        <p>
+                          <span class="icon-star-full checked"></span>
+                          <span class="icon-star-full checked"></span>
+                          <span class="icon-star-full checked"></span>
+                          <span class="icon-star-full checked"></span>
+                          <span class="icon-star-full"></span>
+                        </p>
+                      </div>
                     </div>
-                    <div class="flex-grow-1 mx-4">
-                      <h5>Justin</h5>
-                      <p>
-                        <span class="icon-star-full checked"></span>
-                        <span class="icon-star-full checked"></span>
-                        <span class="icon-star-full checked"></span>
-                        <span class="icon-star-full checked"></span>
-                        <span class="icon-star-full"></span>
-                      </p>
+                  </li>
+                  <li class="list-group-item border-0">
+                    Justin很喜欢，每次告诉他要上课了都会很兴奋，
+                    自己会主动问下节课是什么时候。老师很好，
+                    既有老师的威严又有亲和力，适合Justin这种坐不住的孩子。
+                    他上课的时候因为老师带动得好，还能玩游戏，一直都挺集中的。
+                  </li>
+                  <li class="list-group-item border-0 text-right">20.06.2020 22:11</li>
+                </ul>
+              </div>
+              <div class="item" data-id="2">
+                <ul class="list-group">
+                  <li class="list-group-item border-0">
+                    <div class="d-flex align-items-center">
+                      <div class="flex-shrink-0 rounded-circle bg-primary">
+                        <img src="img/face-2.png">
+                      </div>
+                      <div class="flex-grow-1 mx-4">
+                        <h5>Justin</h5>
+                        <p>
+                          <span class="icon-star-full checked"></span>
+                          <span class="icon-star-full checked"></span>
+                          <span class="icon-star-full checked"></span>
+                          <span class="icon-star-full checked"></span>
+                          <span class="icon-star-full checked"></span>
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </li>
-                <li class="list-group-item border-0">
-                  Justin很喜欢，每次告诉他要上课了都会很兴奋，
-                  自己会主动问下节课是什么时候。老师很好，
-                  既有老师的威严又有亲和力，适合Justin这种坐不住的孩子。
-                  他上课的时候因为老师带动得好，还能玩游戏，一直都挺集中的。
-                </li>
-                <li class="list-group-item border-0 text-right">20.06.2020 22:11</li>
-              </ul>
-            </div>
-            <div class="col-sm-6 mb-4 my-lg-4">
-              <ul class="list-group">
-                <li class="list-group-item border-0">
-                  <div class="d-flex align-items-center">
-                    <div class="flex-shrink-0 rounded-circle bg-primary">
-                      <img src="img/face-2.png">
-                    </div>
-                    <div class="flex-grow-1 mx-4">
-                      <h5>Justin</h5>
-                      <p>
-                        <span class="icon-star-full checked"></span>
-                        <span class="icon-star-full checked"></span>
-                        <span class="icon-star-full checked"></span>
-                        <span class="icon-star-full checked"></span>
-                        <span class="icon-star-full checked"></span>
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item border-0">
-                  我家孩子英语基础一般，能听懂一些，但是也不认识字母。
-                  通过几星期的课程，对英语的兴趣见长。学语言是个慢功夫，
-                  这么短的时间能看到他的进步，说明老师方法得当，总之，
-                  话仙子是个很值得尝试的项目。
-                </li>
-                <li class="list-group-item border-0 text-right">20.06.2020 22:11</li>
-              </ul>
+                  </li>
+                  <li class="list-group-item border-0">
+                    我家孩子英语基础一般，能听懂一些，但是也不认识字母。
+                    通过几星期的课程，对英语的兴趣见长。学语言是个慢功夫，
+                    这么短的时间能看到他的进步，说明老师方法得当，总之，
+                    话仙子是个很值得尝试的项目。
+                  </li>
+                  <li class="list-group-item border-0 text-right">20.06.2020 22:11</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -630,7 +628,7 @@
                 <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#imageCarousel" data-slide-to="1"></li>
                 <li data-target="#imageCarousele" data-slide-to="2"></li>
-              </ol> 
+              </ol>
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img src="img/g-image-1.png" class="d-block w-100" alt="...">
@@ -646,11 +644,11 @@
           </div>
           <div class="modal-footer">
             <a class="image-carusel-control carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="carusel-icon carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
             <a class="image-carusel-control carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="carusel-icon carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
           </div>
@@ -674,6 +672,45 @@
             <h5 class="title"></h5>
             <p class="text"></p>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Materials Modal -->
+    <div class="modal fade custom" id="matPop" tabindex="-1" aria-labelledby="matPopLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">Back to all materials</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="title">Title</div>
+            <div class="content">
+              <div id="matPopCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/image.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="control">
+              <div class="items-num">
+                <span class="current-item">0</span>/<span class="total-item">0</span>
+              </div>
+              <a class="carusel-control image-carusel-control carousel-control-prev" href="#matPopCarousel" role="button" data-slide="prev">
+                <span class="icon-arrow_left text-dark" aria-hidden="true"></span>
+                <span class="sr-only text-secondary">Previous</span>
+              </a>
+              <a class="carusel-control image-carusel-control carousel-control-next" href="#matPopCarousel" role="button" data-slide="next">
+                <span class="icon-arrow_right text-dark" aria-hidden="true"></span>
+                <span class="sr-only text-secondary">Next</span>
+              </a>
+            </div>
+          </div>
+          <div class="modal-footer"></div>
         </div>
       </div>
     </div>

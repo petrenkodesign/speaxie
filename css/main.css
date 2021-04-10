@@ -1,4 +1,25 @@
+/* Fonts */
+.cinese {
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 22px;
+  line-height: 29px;
+}
+.english {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+}
+
 /* Tags customization */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0.2px;
+  color: rgba(0, 0, 0, 0.6);
+}
 img {
   max-width: 100%;
 }
@@ -31,20 +52,22 @@ img {
   color: #FFB357;
 }
 
-/* Video Modal customization */
+/* Modal customization */
 .custom .modal-content, .custom .modal-header, .custom .modal-footer {
   background: none;
   border: none;
 }
 
-#videoPop .close {
+.custom .close {
   opacity: 1;
   color: #fff;
   text-shadow: none;
   font-size: 16px;
   font-weight: 400;
 }
-#videoPop .close:focus, #videoPop .video:focus {outline:0;}
+.custom .close:focus, #videoPop .video:focus {outline:0;}
+
+/* Video modal customization */
 #videoPop .modal-dialog {
   max-width: 60%;
 }
@@ -67,7 +90,75 @@ img {
   color: white;
 }
 
+/* Materials modal customization */
+#matPop .modal-body {
+  background: #fff;
+  padding: 20px 20px 0px;
+  border-radius: 14px;
+}
+#matPop .modal-body .title {
+  max-height: 56px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 56px;
+  margin-bottom: 14px;
+}
+#matPop .modal-body .content {
+  text-align: center;
+  background-color: #eee;
+  background-image: linear-gradient(45deg, #dddddd 3.57%, #eeeeee 3.57%, #eeeeee 50%, #dddddd 50%, #dddddd 53.57%, #eeeeee 53.57%, #eeeeee 100%);
+  background-size: 19.80px 19.80px;
+  max-height: 420px;
+  overflow: hidden;
+}
+#matPop .control {
+  position: relative;
+  height: 74px;
+}
+#matPop .control .carusel-control {
+  background: #DFE2E6;
+  font-size: 24px;
+  top: 16px;
+  bottom: auto;
+  position: absolute;
+  width: auto;
+  height: auto;
+  padding: 4px;
+  border-radius: 50%;
+}
+#matPop .control .items-num {
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+}
+
+@media (min-width: 576px) {
+  #matPop .modal-body {
+    padding: 40px 65px 0px;
+  }
+  #matPop .modal-body .title {
+    font-size: 22px;
+  }
+  #matPop .modal-dialog {
+    max-width: 780px
+  }
+  #matPop .control {
+    height: 93px;
+  }
+}
+
 /* Image modal customization */
+#imagePop .carusel-icon {
+  width: 10px;
+  height: 10px;
+}
 #imagePop .image-carusel-control {
   top: auto;
   bottom: 5px;
@@ -79,7 +170,7 @@ img {
   height: auto;
 }
 #imagePop .carousel-indicators {
-  margin-bottom: -50px;
+  margin-bottom: -55px;
 }
 #imagePop .carousel-indicators li {
   background-color: #000;
