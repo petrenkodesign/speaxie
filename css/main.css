@@ -9,6 +9,20 @@
   /* font-size: 18px;
   line-height: 23px; */
 }
+.fz-22 {
+  font-size: 22px;
+  line-height: 29px
+}
+.fz-20 {
+  font-size: 20px;
+  line-height: 26px
+}
+.fz-18 {
+  font-size: 18px;
+}
+.fz-16 {
+  font-size: 16px;
+}
 
 /* Tags customization */
 body {
@@ -65,6 +79,10 @@ h4 {
   h4 {
     font-size: 16px;
   }
+}
+
+.about,.gallery,.video-lessons,.team,.materials,.moments,.reviews {
+  margin-top: 109px;
 }
 
 /* Bootstrap customization */
@@ -474,4 +492,10 @@ h4 {
   vertical-align: middle;
   height: 46px;
   width: 46px;
+}
+
+/* Safari hack for hidding video control */
+video::-webkit-media-controls-panel {
+  display: none !important;
+  opacity: 1 !important;
 }
