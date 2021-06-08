@@ -84,6 +84,9 @@ h4 {
 .about,.gallery,.video-lessons,.team,.materials,.moments,.reviews,.footer {
   margin-top: 109px;
 }
+.footer {
+  margin-bottom: 100px;
+}
 
 /* Bootstrap customization */
 .rounded {
