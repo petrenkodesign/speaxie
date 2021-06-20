@@ -84,6 +84,9 @@ h4 {
 .about,.gallery,.video-lessons,.team,.materials,.moments,.reviews,.footer {
   margin-top: 109px;
 }
+.about .caption,.gallery .caption,.video-lessons .caption,.team .caption,.materials .caption,.moments .caption,.reviews .caption,.footer .caption {
+  margin-bottom: 50px;
+}
 .footer {
   margin-bottom: 100px;
 }
@@ -106,7 +109,6 @@ h4 {
 }
 .btn-orange:hover,
 .btn-orange:active,
-.btn-orange:visited,
 .btn-orange:focus {
   background-color: #fa4222 !important;
   border-color: #fa4222 !important;
@@ -453,6 +455,9 @@ h4 {
 .card .video-preview .control .progress-bar {
   background: #FD6C3E;
 }
+.card .card-title {
+  text-align: center;
+}
 
 @media screen and (max-width: 800px) {
   .card .video {
@@ -476,7 +481,16 @@ h4 {
   text-align: center;
   letter-spacing: 0.2px
 }
-
+/* .materials .btn:hover {
+  background-color: #d23a09 !important;
+  border-color: #d23a09 !important;
+} */
+.materials .card {
+  cursor: pointer;
+}
+.materials .card:hover {
+  box-shadow: 0px 0px 20px -10px rgb(0 0 0 / 60%);
+}
 /* Moments From Our Classes */
 
 
@@ -500,8 +514,22 @@ h4 {
   width: 46px;
 }
 
+/* Buttons lang hover */
+.lng .chi {
+  display: none;
+}
+.eng {
+  display: block;
+}
+.lng:hover .chi {
+  display: block;
+}
+.lng:hover .eng {
+  display: none;
+}
+
 /* Safari hack for hidding video control */
-video::-webkit-media-controls-panel {
+.video-preview video::-webkit-media-controls-panel {
   display: none !important;
   opacity: 1 !important;
 }

@@ -1,5 +1,7 @@
 $( document ).ready(function() { // site load
 
+  getReviews(); // load reviews content
+
   // Moments and Lessons OWL carusel starting
   $('.video-owl-carousel').owlCarousel({
     loop:false,
@@ -71,7 +73,7 @@ $( document ).ready(function() { // site load
   // Reviews OWL carusel starting
   $('.review-owl-carousel').owlCarousel({
     loop:false,
-    nav:false,
+    nav:true,
     dots:false,
     margin:10,
     mouseDrag:false,
@@ -139,6 +141,8 @@ $('.card .video-preview .control').dblclick(function() {
   var text = $(this).parent().parent().find('.card-text').html();
 
   $('#videoPop .video').html('<source src="' + video_src + '" type="' + video_type + '"></source>');
+  // document.querySelector('#videoPop').querySelector('.video').load();
+  $('#videoPop .video').get(0).load();
   $('#videoPop .video').get(0).currentTime = play_time;
   $('#videoPop .video').get(0).play();
 
@@ -173,7 +177,7 @@ $('.gallery .item').on('click', function() {
   var carusel='';
   var title = $(this).find('img').attr('alt');
   var current_item = $(this).attr('data-id');
-  var total_items = $(this).length;
+  var total_items = $('.gallery .item').length;
 
   $('.gallery .item').each(function(i){
     var card_img = $(this).find('img').attr('src');
@@ -195,28 +199,65 @@ $('.gallery .item').on('click', function() {
 });
 
 // Popup window for material content
+var materials_preview = {
+    first_reading: {
+      0:{file:'contents.jpg', alt:'Page 1'},
+      1:{file:'page_09.jpg', alt:'Page 2'},
+      2:{file:'page_10.jpg', alt:'Page 3'},
+      3:{file:'page_19.jpg', alt:'Page 4'},
+      4:{file:'page_20.jpg', alt:'Page 5'}
+    },
+    little_hands: {
+      0:{file:'LH_SB1_Sample-page-002.jpg', alt:'Page 1'},
+      1:{file:'LH_SB1_Sample-page-003.jpg', alt:'Page 2'},
+      2:{file:'LH_SB1_Sample-page-004.jpg', alt:'Page 3'},
+      3:{file:'LH_SB1_Sample-page-005.jpg', alt:'Page 4'},
+      4:{file:'LH_SB1_Sample-page-006.jpg', alt:'Page 5'},
+      5:{file:'LH_SB1_Sample-page-007.jpg', alt:'Page 6'},
+      6:{file:'LH_SB1_Sample-page-008.jpg', alt:'Page 7'},
+      7:{file:'LH_SB1_Sample-page-009.jpg', alt:'Page 8'}
+    },
+    phonics: {
+      0:{file:'R_page_01.jpg', alt:'Page 1'},
+      1:{file:'R_page_02.jpg', alt:'Page 2'},
+      2:{file:'R_page_03.jpg', alt:'Page 3'},
+      3:{file:'R_page_05.jpg', alt:'Page 4'},
+      4:{file:'page_23.jpg', alt:'Page 5'},
+      5:{file:'page_24.jpg', alt:'Page 6'},
+      6:{file:'page_25.jpg', alt:'Page 7'},
+      7:{file:'page_26.jpg', alt:'Page 8'}
+    },
+    smart_english: {
+      0:{file:'page_07_zoom.jpg', alt:'Page 1'},
+      1:{file:'page_08_zoom.jpg', alt:'Page 2'},
+      2:{file:'page_11_zoom.jpg', alt:'Page 3'},
+      3:{file:'page_12_zoom.jpg', alt:'Page 4'},
+      4:{file:'page_20_zoom.jpg', alt:'Page 5'}
+    }
+};
+
+
 $('.materials .card').on('click', function() {
   var carusel='';
-  var title = $(this).find('.card-title').html();
-  var current_item = $(this).attr('data-id');
+  // var title = $(this).find('.card-title').html();
+  // var current_item = $(this).attr('data-id');
+  var current_dir = $(this).attr('data-dir');
   var total_items = $('.materials .card').length;
 
-  $('.materials .card').each(function(i){
-    var card_img = $(this).find('img').attr('src');
-    var card_title = $(this).find('.card-title').html();
-    var card_id = $(this).attr('data-id');
-
+  var card_id = 1;
+  Object.values(materials_preview[current_dir]).forEach(function(val){
     carusel += '<div data-id="' + card_id  + '" class="carousel-item';
-    if(current_item===card_id) carusel += ' active';
+    if(card_id===1) carusel += ' active';
     carusel += '">';
-    carusel += '<img src="' + card_img + '" alt="' + card_title + '">';
+    carusel += '<img src="storage/materials/'+ current_dir + '/' + val.file + '" alt="' + val.alt + '">';
     carusel += '</div>';
+    card_id++;
   });
 
   $('#matPop .carousel-inner').html(carusel);
-  $('#matPop .title').html(title);
-  $('#matPop .items-num .current-item').text(current_item);
-  $('#matPop .items-num .total-item').text(total_items);
+  $('#matPop .title').html(materials_preview[current_dir][0].alt);
+  $('#matPop .items-num .current-item').text(1);
+  $('#matPop .items-num .total-item').text(card_id-1);
   $('#matPop').modal('show');
 });
 
@@ -237,4 +278,56 @@ $('#matPop').on('hidden.bs.modal', function (e) {
   $('#matPop .items-num .current-item').text(0);
   $('#matPop .items-num .total-item').text(0);
   $('#matPop .title').html("Title");
-})
+});
+
+// Get review data from json
+function getReviews() {
+  $.getJSON( "content/reviews.json", function( data ) {
+    var html='';
+    $.each(data, function(index, val) {
+      html+= '<div class="item" data-id="' + index + '">';
+      html+= '<ul class="list-group">';
+      html+= '<li class="list-group-item border-0">';
+      html+= '<div class="d-flex align-items-center">';
+      html+= '<div class="flex-shrink-0 rounded-circle bg-info">';
+      html+= '<img src="' + val.img + '">';
+      html+= '</div>';
+      html+= '<div class="flex-grow-1 mx-4">';
+      html+= '<h5>' + val.title + '</h5>';
+      html+= '<p>';
+      for(var i=1; i<6; i++) {
+        html+= '<span class="icon-star-full';
+        if (i<=val.stars) html+= ' checked';
+        html+= '"></span>';
+      }
+      html+= '</p>';
+      html+= '</div></div></li>';
+      html+= '<li class="list-group-item border-0">' + val.text + '</li>';
+      html+= '<li class="list-group-item border-0 text-right">' + val.date + '</li>';
+      html+= '</ul></div>';
+      html+= '';
+    });
+
+    $('#reviews').html('<div class="review-owl-carousel owl-carousel owl-theme">'+html+'</div>');
+    $('.review-owl-carousel').owlCarousel({
+      loop:false,
+      nav:false,
+      dots:false,
+      margin:10,
+      mouseDrag:false,
+      responsiveClass:true,
+      responsive:{
+        0:{
+          stagePadding: 50,
+          items:1,
+        },
+        600:{
+          items:2
+        },
+        1000:{
+          items:2
+        }
+      }
+    });
+  });
+}
